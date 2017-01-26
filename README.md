@@ -6,11 +6,12 @@ Implementation of [Single Shot MultiBox Detector (SSD)](https://arxiv.org/abs/15
 
 Currently only stop signs and pedestrian crossing signs are detected. Example detection images are below.
 
-![stop1](inference_out/stop1.png)
-![stop2](inference_out/stop2.png)
-![stop3](inference_out/stop3.png)
-![ped1](inference_out/ped1.png)
-![ped2](inference_out/ped2.png)
+![example1](inference_out/stop_1323896809.avi_image12.png)
+![example2](inference_out/pedestrian_1323896918.avi_image9.png)
+![example3](inference_out/stop_1323804419.avi_image31.png)
+![example4](inference_out/stop_1323822840.avi_image5.png)
+![example5](inference_out/pedestrianCrossing_1330547304.avi_image1.png)
+![example6](inference_out/pedestrianCrossing_1333395817.avi_image21.png)
 
 The model was trained on the [LISA Traffic Sign Dataset](http://cvrr.ucsd.edu/LISA/lisa-traffic-sign-dataset.html), a dataset of US traffic signs.
 
