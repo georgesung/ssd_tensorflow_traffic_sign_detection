@@ -35,7 +35,13 @@ To run predictions using the pre-trained model:
 
 Training the model from scratch:
 * Download the [LISA Traffic Sign Dataset](http://cvrr.ucsd.edu/LISA/lisa-traffic-sign-dataset.html), and store it in a directory `$LISA_DATA`
-* *Documentation for this step not finalized, but you want to create data_raw_400x260.p such that data_prep.py can work with it. Also, resize all images to 400x260 and convert them to grayscale, and make it available in a directory $ROOT/resized_images_400x260*
+* `cd $LISA_DATA`
+* Follow instructions in the LISA Traffic Sign Dataset to create 'mergedAnnotations.csv' such that only stop signs and pedestrian crossing signs are shown
+* `cp $ROOT/data_gathering/create_pickle.py $LISA_DATA`
+* `python create_pickle.py`
+* `cd $ROOT`
+* `ln -s $LISA_DATA/resized_images_* .`
+* `ln -s $LISA_DATA/data_raw_*.p .`
 * `python data_prep.py`
   * This performs box matching between ground-truth boxes and default boxes, and packages the data into a format used later in the pipeline
 * `python train.py`
