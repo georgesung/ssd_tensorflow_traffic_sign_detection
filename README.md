@@ -25,14 +25,6 @@ The model was trained on the [LISA Traffic Sign Dataset](http://cvrr.ucsd.edu/LI
 ## How to run
 Clone this repository somewhere, let's refer to it as `$ROOT`
 
-To run predictions using the pre-trained model:
-* [Download the pre-trained model](https://drive.google.com/file/d/0BzaCOTL9zhUlekM3NWU1bmNqeVk/view?usp=sharing&resourcekey=0-0Lr57jKTTLJfqfHNTLsQuw) to `$ROOT`
-* `cd $ROOT`
-* `python inference.py -m demo`
-  * This will take the images from sample_images, annotate them, and display them on screen
-* To run predictions on your own images and/or videos, use the `-i` flag in inference.py (see the code for more details)
-  * Note the model severly overfits at this time
-
 Training the model from scratch:
 * Download the [LISA Traffic Sign Dataset](http://cvrr.ucsd.edu/LISA/lisa-traffic-sign-dataset.html), and store it in a directory `$LISA_DATA`
 * `cd $LISA_DATA`
@@ -47,6 +39,9 @@ Training the model from scratch:
 * `python train.py`
   * This trains the SSD model
 * `python inference.py -m demo`
+  * This will take the images from sample_images, annotate them, and display them on screen
+* To run predictions on your own images and/or videos, use the `-i` flag in inference.py (see the code for more details)
+  * Note the model severly overfits at this time
 
 ## Differences between original SSD implementation
 Obivously, we are only detecting certain traffic signs in this implementation, whereas the original SSD implemetation detected a greater number of object classes in the PASCAL VOC and MS COCO datasets. Other notable differences are:
